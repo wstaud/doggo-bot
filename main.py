@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import config
 
 client = discord.Client()
 
@@ -15,4 +16,4 @@ async def on_message(message):
     if message.content.startswith('!ping'):
         await cilent.send_message(message.channel, 'Pong!')
 
-client.run('token')
+client.run(config.token)
