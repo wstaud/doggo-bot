@@ -14,6 +14,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('!ping'):
-        await cilent.send_message(message.channel, 'Pong!')
+        await client.send_message(message.channel, 'Pong!')
+    elif message.content.startswith('!good bot'):
+        await client.send_message(message.channel, 'Bark!')
 
 client.run(config.token)
