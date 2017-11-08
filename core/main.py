@@ -1,6 +1,9 @@
 import discord
 import asyncio
 import config
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 client = discord.Client()
 
@@ -17,5 +20,6 @@ async def on_message(message):
         await client.send_message(message.channel, 'Pong!')
     elif message.content.startswith('!good bot'):
         await client.send_message(message.channel, 'Bark!')
+
 
 client.run(config.token)
