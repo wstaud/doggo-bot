@@ -21,5 +21,4 @@ async def on_message(message):
     elif message.content.startswith('!good bot'):
         await client.send_message(message.channel, 'Bark!')
 
-
 client.run(config.token)
